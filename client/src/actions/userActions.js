@@ -77,9 +77,16 @@ export function signoutUser() {
   return { type: UNAUTH_USER };
 }
 
+// Just to test API with proctected route
 export function fetchMessage() {
   return (dispatch) => {
-    fetch(`${ROOT_URL}/saved-jobs`, { method: 'get' })
-      .then(response => console.log(response));
+    fetch(`${ROOT_URL}/saved-jobs`, {
+      method: 'get',
+      headers: new Headers({ authorization: localStorage.getItem('token') }),
+    })
+      .then(handleErrors)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
   };
 }
