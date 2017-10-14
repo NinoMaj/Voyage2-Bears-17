@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchMessage } from '../../actions/userActions';
 
 class SavedJobs extends Component {
+  componentWillMount() {
+    this.props.fetchMessage();
+  }
+
   render() {
     return (
       <div>
@@ -10,4 +16,4 @@ class SavedJobs extends Component {
   }
 }
 
-export default SavedJobs;
+export default connect(null, { fetchMessage })(SavedJobs);

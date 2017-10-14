@@ -76,3 +76,10 @@ export function signoutUser() {
   localStorage.removeItem('token');
   return { type: UNAUTH_USER };
 }
+
+export function fetchMessage() {
+  return (dispatch) => {
+    fetch(ROOT_URL, { method: 'get' })
+      .then(response => console.log(response));
+  };
+}
