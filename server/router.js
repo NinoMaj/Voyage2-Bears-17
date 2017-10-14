@@ -8,8 +8,8 @@ const requireSignin = passport.authenticate('local', { session: false, failWithE
 
 
 module.exports = function(app) {
-  app.get('/explore-jobs', requireAuth, (req, res) => {
-    res.send({ message: 'Welcome to Explore Jobs page.' });
+  app.get('/saved-jobs', requireAuth, (req, res) => {
+    res.send({ message: 'Welcome to Saved Jobs page.' });
   });
   app.post('/signin', requireSignin, Authentication.signin, Authentication.signinError);
   app.post('/signup', Authentication.signup);

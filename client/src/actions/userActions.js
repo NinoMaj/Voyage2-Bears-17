@@ -79,7 +79,7 @@ export function signoutUser() {
 
 export function fetchMessage() {
   return (dispatch) => {
-    fetch(ROOT_URL, { method: 'get' })
+    fetch(`${ROOT_URL}/saved-jobs`, { method: 'get' })
       .then(response => console.log(response));
   };
 }
