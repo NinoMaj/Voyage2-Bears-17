@@ -41,7 +41,7 @@ class Signup extends Component {
             name="email"
             type="email"
             component={renderField}
-            label="email"
+            label="yourname@example.com"
           />
         </fieldset>
         <fieldset className="form-group">
@@ -50,7 +50,6 @@ class Signup extends Component {
             name="password"
             type="password"
             component={renderField}
-            label="password"
           />
         </fieldset>
         <fieldset className="form-group">
@@ -59,11 +58,10 @@ class Signup extends Component {
             name="passwordConfirm"
             type="password"
             component={renderField}
-            label="password"
           />
         </fieldset>
         {this.renderAlert()}
-        <button action="submit" className="btn btn-primary">Sign Up</button>
+        <button action="submit" className="btn btn-primary btn-block">Sign Up</button>
       </Form>
     );
   }
