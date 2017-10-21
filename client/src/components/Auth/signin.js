@@ -47,7 +47,7 @@ class Signin extends Component {
           />
         </fieldset>
         {this.renderAlert()}
-        <button action="submit" className="btn btn-primary">Sign in</button>
+        <button action="submit" className="btn btn-primary btn-block">Sign in</button>
       </Form>
     );
   }
