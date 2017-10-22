@@ -36,7 +36,7 @@ class App extends Component {
             path="/signout"
             render={history => <Signout history={history.history} />}
           />
-          <Route exact path="/explore" component={ExploreJobs} />
+          <Route exact path="/jobs" component={ExploreJobs} />
           <Route exact path="/saved-jobs" component={RequireAuth(SavedJobs)} />
           <Route exact path="/about-us" component={About} />
         </main>
