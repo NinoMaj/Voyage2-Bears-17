@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Footer = styled.div`
   padding: 0.01em 16px;
@@ -6,15 +6,15 @@ export const Footer = styled.div`
   padding-bottom: 32px;
   background-color: #f1f1f1;
   width: auto;
-  position: absolute;
   right: 0px;
   bottom: 0px;
   left: 0px;
 
-  &:after, &:before {
+  :after,
+  :before {
     content: "";
     display: table;
-    clear: both
+    clear: both;
   }
 `;
 
@@ -28,6 +28,6 @@ export const Link = styled.a`
   text-decoration: underline;
 
   &:hover {
-    color: #54B7D2;
+    color: #54b7d2;
   }
 `;
